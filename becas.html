@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <br>
+    <h1>Becas y Ayuda Financiera</h1>
+    <img src="imagenes/becas.jpg" alt="" class="becas-imagen">
+    <div class="becas-texto">
+        <p>
+            Con el objeto de ofrecer mayores posibilidades de acceso a una educación de clase mundial, la UJCV ha creado programas de becas los cuales han sido creados para beneficiar a estudiantes.
+        </p>
+        <a href="tel:+50422758510" class="btn btn-primary" role="button">
+            <i class="bi bi-telephone-fill"></i>
+            Solicita más información
+        </a>
+    </div>
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Pedro Antonio Ponce Reyes
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

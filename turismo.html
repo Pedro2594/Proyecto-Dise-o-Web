@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+<div id="container" class="contenido_seccion">
+    <div class="turismo-hero">
+        <div class="carrera-hero-text"><u>Licenciatura en Administraci&oacute;n de Empresas Tur&iacute;sticas</u></div>
+    </div>
+    <div class="perfil-carrera">        
+        <div class="perfil-contenedor-horizontal">
+            <div class="perfil-contenedor-vertical" style="width:49%">
+                <h2>Perfil de la carrera</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>La carrera forma un Administrador de Empresas Turísticas capacitado profesionalmente para detectar necesidades y oportunidades del contexto social en el sector del turismo y generar soluciones creativas y efectivas, sustentadas en el análisis crítico, la conceptualización de los problemas y la investigación, con capacidades de gestión empresarial y de innovación, así como en el uso apropiado de los medios tecnológicos.</p>
+                    <p>El Administrador de Empresas Turísticas que forme la UJCV aplicará lo último en tecnología para hacer eficiente la administración de la actividad turística, la integración de ámbitos multidisciplinarios (Arquitectura, Ingeniería Civil, Ingeniería Industrial, etc.) y el derrame de beneficios en las comunidades donde se ubiquen sus proyectos, emprendimientos o donde preste sus servicios profesionales. El Administrador de Empresas Turísticas que forme la UJCV reconocerá la responsabilidad ética de su actividad en función de los valores de la vida social y reconocerá la responsabilidad cultural y patrimonial que conlleva su profesión.</p>
+                </div>
+                <br/>
+                <h2>Objetivos</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>Formar Abogadas y Abogados con habilidades teorico-practicas que lo conduzcan al ejercicio de la procuracion con exito, apto para el desempeño de sus funciones en cualquier ambito laboral, con capacidad de analisis, habilidad para el dialogo y la conciliacion, con valores eticos y morales.</p></p>
+                </div>
+            </div>            
+            <div class="perfil-contenedor-vertical" style="width:49%; margin-left:2%;">                
+                <a href="imagenes/lic_turismo.pdf" target="_blank">
+                    <img src="imagenes/lic_turismo.png" style="width:100%; border: 2px solid white;" alt="">
+                </a>
+            </div>
+        </div>        
+    </div>        
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Pedro Antonio Ponce Reyes
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

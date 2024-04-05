@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <img src="imagenes/portal_docente.jpg" alt="" class="imagen-accesos">        
+    <a href="https://portal.ujcv.edu.hn:4433/portal_catedratico/(S(nh20ek1ljvnyknhrlghysvxw))/login.aspx" class="btn btn-primary" style="position:fixed; top:600px; left:45%" target="_blank">
+        Visitar Portal Docente
+    </a>
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Christian Javier Alvarez Moreno
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

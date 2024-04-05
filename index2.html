@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidad Jos&eacute; Cecilio del Valle</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="icon" href="./imagenes/cropped-icon-fav-32x32.png">    
+    <script src="./js/bootstrap.bundle.js"></script>
+</head>
+<script type="text/javascript">
+    function resizeIframe(iframe) {        
+      iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    }    
+
+</script>  
+<script>
+    window.onmessage = (e) => {
+        console.log(e);
+      if (e.data.hasOwnProperty("frameHeight")) {
+        document.getElementById("if_contenido").style.height = `${e.data.frameHeight + 30}px`;
+      }
+    };
+</script>
+<body>
+    <nav class="navbar navbar-expand-lg navegacion">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <img src="./imagenes/logo-ujcv.svg" alt="logo ujcv" width="100" height="90">
+            </li>
+            <li class="nav-item">
+                <a href="inicio.html" target="if_contenido" class="nav-link">Inicio</a>                
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true">Carga Academica</a>
+                <ul class="dropdown-menu">
+                    <li><a href="infotecnologia.html" target="if_contenido" class="dropdown-item">Infotecnolog&iacute;a</a></li>
+                    <li><a href="derecho.html" target="if_contenido" class="dropdown-item">Derecho</a></li>
+                    <li><a href="arquitectura.html" target="if_contenido" class="dropdown-item">Arquitectura</a></li>
+                    <li><a href="diseno_interiores.html" target="if_contenido" class="dropdown-item">Dise&ntilde;o de Interiores</a></li>
+                    <li><a href="relaciones_internacionales.html" target="if_contenido" class="dropdown-item">Relaciones Internacionales</a></li>
+                    <li><a href="recursos_humanos.html" target="if_contenido" class="dropdown-item">Gesti&oacute;n del Talento Humano</a></li>
+                    <li><a href="periodismo.html" target="if_contenido" class="dropdown-item">Periodismo</a></li>
+                    <li><a href="diseno_grafico.html" target="if_contenido" class="dropdown-item">Dise&ntilde;o Gr&aacute;fico</a></li>
+                    <li><a href="turismo.html" target="if_contenido" class="dropdown-item">Turismo</a></li>
+                    <li><a href="mercadotecnia.html" target="if_contenido" class="dropdown-item">Mercadotecnia</a></li>
+                    <li><a href="administracion.html" target="if_contenido" class="dropdown-item">Administraci&oacute;n de Empresas</a></li>
+                    <li><a href="auditoria.html" target="if_contenido" class="dropdown-item">Auditor&iacute;a y Finanzas</a></li>
+                    <li><a href="ingenieria_negocios.html" target="if_contenido" class="dropdown-item">Ingenier&iacute;a de Negocios</a></li>
+                    <li><a href="ingenieria_mercadotecnia.html" target="if_contenido" class="dropdown-item">Ingenier&iacute;a en Mercadotecnia y Negocios Internacionales</a></li>
+                    <li><a href="ingenieria_construccion.html" target="if_contenido" class="dropdown-item">Ingenier&iacute;a de la Construcci&oacute;n</a></li>
+                    <li><a href="ingenieria_industrial.html" target="if_contenido" class="dropdown-item">Ingenier&iacute;a Industrial</a></li>
+                    <li><a href="ingenieria_civil.html" target="if_contenido" class="dropdown-item">Ingenier&iacute;a Civil</a></li>
+                    <li><a href="psicologia.html" target="if_contenido" class="dropdown-item">Psicolog&iacute;a</a></li>
+                    <li><a href="becas.html" target="if_contenido" class="dropdown-item">Becas</a></li>
+                    <li><a href="convenio.html" target="if_contenido" class="dropdown-item">Convenio</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link" role="button" data-bs-toggle="dropdown">Biblioteca</a>
+                <ul class="dropdown-menu">
+                    <li><a href="biblioteca.html" target="if_contenido" class="dropdown-item">Biblioteca</a></li>
+                    <li><a href="locker.html" target="if_contenido" class="dropdown-item">Locker</a></li>
+                    <li><a href="cubiculos.html" target="if_contenido" class="dropdown-item">Salas de Estudio Individual</a></li>
+                    <!-- <li><a href="entradas_salidas.html" target="if_contenido" class="dropdown-item">Entrada / Salida Personal</a></li>                     -->
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="admisiones.html" target="if_contenido" class="nav-link">Admisiones</a>                
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link" role="button" data-bs-toggle="dropdown">Transporte</a>
+                <ul class="dropdown-menu">
+                    <li><a href="rutas.html" target="if_contenido" class="dropdown-item">Rutas</a></li>                    
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link" role="button" data-bs-toggle="dropdown">Laboratorios</a>
+                <ul class="dropdown-menu">
+                    <li><a href="comidas_bebidas.html" target="if_contenido" class="dropdown-item">Comidas y Bebidas</a></li>                    
+                    <li><a href="computo.html" target="if_contenido" class="dropdown-item">Computo</a></li>
+                    <li><a href="fisica.html" target="if_contenido" class="dropdown-item">Fisica</a></li>
+                    <li><a href="quimica.html" target="if_contenido" class="dropdown-item">Quimica</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link" role="button" data-bs-toggle="dropdown">Élite</a>
+                <ul class="dropdown-menu">
+                    <li><a href="ingles.html" target="if_contenido" class="dropdown-item">Ingl&eacute;s</a></li>                    
+                    <li><a href="mandarin.html" target="if_contenido" class="dropdown-item">Mandar&iacute;n</a></li>
+                    <li><a href="frances.html" target="if_contenido" class="dropdown-item">Franc&eacute;s</a></li>
+                    <li><a href="computacion.html" target="if_contenido" class="dropdown-item">Computaci&oacute;n</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link" role="button" data-bs-toggle="dropdown">Conocenos</a>
+                <ul class="dropdown-menu">
+                    <li><a href="historia.html" target="if_contenido" class="dropdown-item">Historia</a></li>                    
+                    <li><a href="mision.html" target="if_contenido" class="dropdown-item">Misi&oacute;n</a></li>
+                    <li><a href="vision.html" target="if_contenido" class="dropdown-item">Visi&oacute;n</a></li>
+                    <li><a href="campus_tgu.html" target="if_contenido" class="dropdown-item">Campus Tegucigalpa</a></li>
+                    <li><a href="campus_com.html" target="if_contenido" class="dropdown-item">Campus Comayag&uuml;a</a></li>
+                </ul>
+            </li>            
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link" role="button" data-bs-toggle="dropdown">Accesos</a>
+                <ul class="dropdown-menu">
+                    <li><a href="campus_virtual.html" target="if_contenido" class="dropdown-item">Campus Virtual</a></li>                    
+                    <li><a href="portal_alumno.html" target="if_contenido" class="dropdown-item">Portal Alumno</a></li>
+                    <li><a href="portal_docente.html" target="if_contenido" class="dropdown-item">Portal Docente</a></li>                    
+                    <li><a href="acceso_ingles.html" target="if_contenido" class="dropdown-item">Ingl&eacute;s</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link" role="button" data-bs-toggle="dropdown">Dise&ntilde;adores</a>
+                <ul class="dropdown-menu">
+                    <li><a href="hasly.html" target="if_contenido" class="dropdown-item">Hasly Jasmine Meza</a></li>                    
+                    <li><a href="pedro.html" target="if_contenido" class="dropdown-item">Pedro Antonio Ponce</a></li>
+                    <li><a href="christian.html" target="if_contenido" class="dropdown-item">Christian Javier &Aacute;lvarez</a></li>                    
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="contactos.html" target="if_contenido" class="nav-link">Contactos</a>                
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link" role="button" data-bs-toggle="dropdown">Servicios</a>
+                <ul class="dropdown-menu">
+                    <li><a href="cau.html" target="if_contenido" class="dropdown-item">CAU</a></li>                    
+                    <li><a href="pagos.html" target="if_contenido" class="dropdown-item">Pagos en L&iacute;nea</a></li>
+                    <li><a href="crai.html" target="if_contenido" class="dropdown-item">CRAI</a></li>                    
+                    <li><a href="seguro_medico.html" target="if_contenido" class="dropdown-item">Seguro Medico</a></li>                    
+                </ul>
+            </li>
+        </ul>
+    </nav>    
+    <iframe class="container-fluid contenido" scrolling="no" frameborder="0" marginwidth="0" marginheight="0" src="inicio.html" frameborder="0" id="if_contenido" name="if_contenido" width="100%"></iframe>
+    <div class="container-fluid pie_pagina">
+        <span style="margin-right:1em">Todos los derechos reservados &copy; 2023 Universidad Jos&eacute; Cecilio del Valle</span>
+        <a href="https://www.facebook.com/UJCVOFICIAL"><i class="bi bi-facebook"></i></a>
+        <a href="https://wa.link/zlldxz"><i class="bi bi-whatsapp"></i></a>        
+        <a href="https://twitter.com/ujcv20"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.instagram.com/ujcvoficial/"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/ujcv/"><i class="bi bi-linkedin"></i></a>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <br>
+    <img src="imagenes/frances.png" style="width: 512px; height:512px" alt="" class="bounce-in-top">
+    <br>
+    <div class="idioma-texto">
+        <p>
+            Aprender francés amplía las posibilidades de ingresar en el mercado laboral internacional. Francia, es la quinta potencia comercial y el tercer país de acogida para las inversiones extranjeras. El francés es la lengua internacional de la cocina, la moda, el teatro, las artes visuales, la danza y la arquitectura,  Anímate aprender este idioma, y vive su cultura.
+        </p>
+    </div>
+    
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Christian Javier Alvarez Moreno
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

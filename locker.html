@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <br>
+    <div style="display: flex; flex-direction:row">
+        <img src="imagenes/sidebar1.jpg" alt="" style="height: 700px;">
+        <img src="imagenes/lockers.jpg" alt="" style="width:700px; height:700px">
+        <img src="imagenes/sidebar2.jpg" alt="" style="height: 700px;">
+    </div>
+    
+    <br>
+    <div class="idioma-texto">
+        <p>
+            Como un Servicio Complementario la UJCV pone a disposición de toda la Comunidad Estudiantil
+            el Alquiler de Casilleros para el depósito de materiales o pertenencias personales,
+            se ofrecen de dos tamaños, con las siguientes especificaciones:
+        </p>
+        <ul>
+            <li>Grande: 35 Pulgadas de Alto X 14 Pulgadas de Ancho a un precio de L. 120.00 por cada período académico</li>
+            <li>Pequeño: 17 Pulgadas de Alto X 11 Pulgadas de Ancho a un precio de L. 100.00 por cada período académico</li>
+        </ul>
+        Para hacer su reserva seguir el proceso descrito abajo.
+    </div>
+    <br>
+    <ul class="steps">
+        <li>Abocarse al Departamento de Contabilidad en el Edificio Administrativo de la UJCV</li>
+        <li>Leer políticas de uso</li>
+        <li>Llenar formulario</li>
+        <li>Pagar</li>
+      </ul>
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Hasly Jasmine Meza Martinez
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

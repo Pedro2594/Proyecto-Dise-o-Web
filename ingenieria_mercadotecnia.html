@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+<div id="container" class="contenido_seccion">
+    <div class="ingenieria-marketing-hero">
+        <div class="carrera-hero-text"><u>Ingeniería en Mercadotecnia y Negocios Internacionales</u></div>
+    </div>
+    <div class="perfil-carrera">        
+        <div class="perfil-contenedor-horizontal">
+            <div class="perfil-contenedor-vertical" style="width:49%">
+                <h2>Perfil de la carrera</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>El objetivo de formación integral del profesional en Ingeniería en Mercadotecnia y Negocios Internacionales es: Educar profesionales de excelencia, con dominio en la administración de mercadotecnia y métodos cuantitativos, con sólidos principios científicos en disciplinas de apoyo que le permitan comprender, analizar y aportar soluciones en aspectos económicos, financieros, sociales y culturales en un mercado globalizado.</p>
+                </div>
+                <br/>
+                <h2>Objetivos</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>Educar profesionales de excelencia, con dominio en la administración de mercadotecnia y métodos cuantitativos, con sólidos principios científicos en disciplinas de apoyo que le permitan comprender, analizar y aportar soluciones en aspectos económicos, financieros, sociales y culturales en un mercado globalizado</p>
+                </div>
+            </div>            
+            <div class="perfil-contenedor-vertical" style="width:49%; margin-left:2%;">                
+                <a href="imagenes/ing_marketing.pdf" target="_blank">
+                    <img src="imagenes/ing_marketing.png" style="width:100%; border: 2px solid white;" alt="">
+                </a>
+            </div>
+        </div>        
+    </div>        
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Pedro Antonio Ponce Reyes
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

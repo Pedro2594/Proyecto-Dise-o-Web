@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <br>
+    <h1>Alianzas y Convenios</h1>
+    <img src="imagenes/convenios.jpg" alt="" class="becas-imagen">
+    <div class="becas-texto">
+        <p>
+            Nuestras alianzas y convenios: La universidad José Cecilio del Valle cuenta con alianzas estratégicas y convenios a nivel internacional, lo que te abre oportunidades a nivel GLOBAL.
+        </p>
+        <a href="tel:+50422758510" class="btn btn-primary" role="button">
+            <i class="bi bi-telephone-fill"></i>
+            Solicita más información
+        </a>
+    </div>
+    <img src="imagenes/alianzas.png" alt="" class="becas-imagen">
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Pedro Antonio Ponce Reyes
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

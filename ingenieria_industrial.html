@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+<div id="container" class="contenido_seccion">
+    <div class="ingenieria-industrial-hero">
+        <div class="carrera-hero-text"><u>Ingeniería Industrial</u></div>
+    </div>
+    <div class="perfil-carrera">        
+        <div class="perfil-contenedor-horizontal">
+            <div class="perfil-contenedor-vertical" style="width:49%">
+                <h2>Perfil de la carrera</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>Al egresar como profesional en la rama de la Ingeniería de Industrial la persona poseerá las competencias necesarias para la optimización de recursos de una empresa (personas, equipo, materiales, información, energía, dinero y tecnología) para la fabricación de productos o la prestación de servicios, además cuentan con una visión integral de negocios, administración, gerencia y gestión de la calidad, tomando en consideración los diferentes contextos culturales, ambientales y tecnológicos de la organización.</p>
+                </div>
+                <br/>
+                <h2>Objetivos</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>La Carrera de Ingeniería Industrial es una de las carreras consolidadas de la Universidad José Cecilio del Valle. Desde sus inicios ha sido una carrera de mucho prestigio, muy reconocida por la calidad de los ingenieros industriales que se gradúan como por los trabajos que realizan los estudiantes y los egresados de la misma. Los estudiantes de la UJCV gozan de prestigio y la planta docente cuenta con profesionales de muy alto nivel, con mucha experiencia en el campo de la ingeniería industrial, reconocidos a nivel nacional e internacional. Formar profesionales con el dominio integral de su campo de trabajo, capaz de proyectar, diseñar y dirigir proyectos con diferentes contextos culturales y ambientales en las áreas de manufactura, logística, procesos, sistemas de gestión de calidad, administración de empresas y sistemas de información, mediante la optimización de procesos y asignación de recursos que provean soluciones oportunas y maximicen la implementación de nuevos proyectos que resulten en el crecimiento y expansión de las empresas.</p>
+                </div>
+            </div>            
+            <div class="perfil-contenedor-vertical" style="width:49%; margin-left:2%;">                
+                <a href="imagenes/ing_industrial.pdf" target="_blank">
+                    <img src="imagenes/ing_industrial.png" style="width:100%; border: 2px solid white;" alt="">
+                </a>
+            </div>
+        </div>        
+    </div>        
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Pedro Antonio Ponce Reyes
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

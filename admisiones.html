@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <br/>
+    <h2 style="font-weight:bold">
+        En la UJCV te espera una gran experiencia,
+        <br/>
+        Te damos la bienvenida a un mundo lleno de <span style="color:cornflowerblue" class="text-pop-up-top">posibilidades</span>
+    </h2>
+    <br/>
+    <div style="width:80%; display:flex; flex-direction:column; align-items:center">
+        <img src="imagenes/admisiones_ujcv.jpg" usemap="#mapa" class="imagen-admisiones">
+        <map name="mapa">        
+            <area shape="rect" coords="35,500,400,600" style="outline:none;" data-bs-toggle="modal" data-bs-target="#pregradoModal" href="#"/>
+            <area shape="rect" coords="35,640,400,720" style="outline:none;" data-bs-toggle="modal" data-bs-target="#posgradoModal" href="#" />
+            <area shape="rect" coords="35,780,700,850" style="outline:none;" data-bs-toggle="modal" data-bs-target="#educacionContinuaModal" href="#" />
+        </map>        
+    </div>
+    
+
+    <div class="modal fade" name="pregradoModal" id="pregradoModal" tabindex="-1" aria-labelledby="pregradoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content admisiones-fondo">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="pregradoModalLabel">Pregrado</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Conoce nuestras novedosas carreras adaptadas a metodología de innovación curricular europea, orientadas al desarrollod de habilidades transversales de los estudiantes.</p>
+            </div>            
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" name="posgradoModal" id="posgradoModal" tabindex="-1" aria-labelledby="posgradoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content admisiones-fondo">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="posgradoModalLabel">Posgrado</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Los puestos de trabajo que requieren mayor
+                especialización y conllevan más
+                responsabilidad están reservados a las
+                personas mejor preparadas. Prepárate con nuestros posgrados.
+              </p>
+            </div>            
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" name="educacionContinuaModal" id="educacionContinuaModal" tabindex="-1" aria-labelledby="educacionContinuaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content admisiones-fondo">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="educacionContinuaModalLabel">Educación Continua</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Con nuestro programa de Educación Continua
+                puedes actualizarte y desarrollar nuevas habilidades.
+                Conoce nuestros nuevos diplomados y actualizate 
+                para acceder a mejores oportunidades.
+              </p>
+            </div>            
+          </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+  Clase: Diseño Web | Autor: Hasly Jasmine Meza Martinez
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

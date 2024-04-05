@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <div style="display:flex; flex-direction:row; width:80%;">
+        <div style="width:50%">
+            <img src="imagenes/cau.png" alt="" style="width:100%" class="slide-in-right">
+        </div>
+        <div style="width:50%; display:flex; flex-direction:column; align-items:center; ">
+            <div class="slide-in-right-1s">
+                <h2>Centro de Atención Universitario (CAU)</h2>
+                <p>
+                    Bienvenido al CAU
+                    <br/>
+                    Todas tus necesidades y solicitudes estudiantiles en un sólo lugar!
+                    <br/>
+                    Vive una experiencia única, contacta a tu asesor CAU.
+                </p>
+            </div>
+            <div class="cau-beneficios slide-in-right-2s">
+                <i class="bi bi-camera-reels-fill" style="font-size: xx-large; color:blue"></i>
+                <h3>Tutoriales y descargas</h3>
+                <p>
+                    Accede a cientos de tutoriales que te ayudarán a resolver de manera rápida las dudas más comunes que puedas tener
+                </p>
+                <a href="https://soporte.ujcv.edu.hn/knowledge" target="_blank" class="btn btn-primary">
+                    Ver tutoriales y recursos
+                </a>
+            </div>
+            <br>
+            <div class="cau-beneficios slide-in-right-2s">                
+                <i class="bi bi-whatsapp" style="font-size: xx-large; color:#1cfd14"></i>
+                <h3>Atención vía WhatsApp</h3>
+                <p>
+                    Accede directamente vía WhatsApp para contactar con tu asesor CAU, quien atenderá cualquier solicitud que tengas
+                </p>
+                <a href="https://api.whatsapp.com/send?phone=50422758511" target="_blank" class="btn btn-primary" style="background-color:#1cfd14">
+                    Contacta con tu asesor
+                </a>
+            </div>
+            <br>
+            <div class="cau-beneficios slide-in-right-2s">                
+                <i class="bi bi-ticket-detailed-fill" style="font-size: xx-large; color:#ffc508"></i>
+                <h3>Atención vía Tickets</h3>
+                <p>
+                    El CAU te ofrece atención siempre que la necesites, si necesitas ayuda te invitamos a realizar tus solicitudes también a través de ticket
+                </p>
+                <a href="https://soporte.ujcv.edu.hn/customer/ticket" target="_blank" class="btn btn-primary">
+                    Enviar ticket de soporte
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Hasly Jasmine Meza Martinez
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

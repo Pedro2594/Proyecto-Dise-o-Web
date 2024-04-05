@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+<div id="container" class="contenido_seccion">
+    <div class="card" style="width: 24rem">
+        <a href="admisiones.html" target="if_contenido"><img src="./imagenes/perfil_hasly.jpg" class="card-img-top"></a> 
+        <div class="card-body">
+            <h5 class="card-title">Hasly Jasmine Meza</h5>
+            <p class="card-text"></p>
+        </div>
+    </div>    
+    <br>
+    <div class="perfil-dato">
+        <div class="perfil-header">
+            Edad:
+        </div>
+        <div class="perfil-dato">
+            22 años
+        </div>
+    </div>
+    <div class="perfil-dato">
+        <div class="perfil-header">
+            Fecha de Nacimiento:
+        </div>
+        <div class="perfil-dato">
+            17/07/2000
+        </div>
+    </div>
+    <div class="perfil-dato">
+        <div class="perfil-header">
+            Resumen:
+        </div>
+        <div class="perfil-dato">
+            Estudiante de la carrera de Ingeniería en Infotecnología
+        </div>
+    </div>
+    <div class="perfil-dato">
+        <div class="perfil-header">
+            Hobbies:
+        </div>
+        <div class="perfil-dato">
+            pintar, escuchar musica, hornear, caligrafía
+        </div>
+    </div>
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Christian Javier Alvarez Moreno
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>
+

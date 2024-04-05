@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <br>
+    <img src="imagenes/computacion.png" alt="" class="bounce-in-top">
+    <br>
+    <div class="idioma-texto">
+        <p>
+            Curso ofimática nivel básico fundamental para todo aquel que precisa realizar tareas de oficina por ordenador en la empresa. Este curso de Ofimática con Office prepara al alumno con los conocimientos de informática imprescindibles para el trabajo en la empresa, con el manejo de la suite de ofimática de microsoft en los programas: Word para edicion de textos, hoja de calculo Excel , Base de datos Access y presentaciones con Powerpoint.
+        </p>
+    </div>
+    
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Christian Javier Alvarez Moreno
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+<div id="container" class="contenido_seccion">
+    <div class="card" style="width: 24rem">
+        <a href="admisiones.html" target="if_contenido"><img src="./imagenes/perfil_pedro.jpg" class="card-img-top"></a> 
+        <div class="card-body">
+            <h5 class="card-title">Pedro Antonio Ponce</h5>
+            <p class="card-text"></p>
+        </div>        
+    </div>    
+    <br>
+    <div class="perfil-dato">
+        <div class="perfil-header">
+            Edad:
+        </div>
+        <div class="perfil-dato">
+            28 años
+        </div>
+    </div>
+    <div class="perfil-dato">
+        <div class="perfil-header">
+            Fecha de Nacimiento:
+        </div>
+        <div class="perfil-dato">
+            25/06/1994
+        </div>
+    </div>
+    <div class="perfil-dato">
+        <div class="perfil-header">
+            Resumen:
+        </div>
+        <div class="perfil-dato">
+            En una relación con Mónica Valle, cursando 4to año de la carrera de ingeniería en Infotecnologia
+        </div>
+    </div>
+    <div class="perfil-dato">
+        <div class="perfil-header">
+            Hobbies:
+        </div>
+        <div class="perfil-dato">
+            Cocinar, ver anime, leer, dormir, escuchar música y pasar tiempo con familiares y amigos
+        </div>
+    </div>
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Christian Javier Alvarez Moreno
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

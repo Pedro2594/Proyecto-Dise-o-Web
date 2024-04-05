@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <br>
+    <div class="crai-info slide-in-right">
+        <h2>Programa de <span class="flicker-in-1" style="color:#4d0ab9">Salud UJCV</span></h2>
+        <p>
+            Preservar la salud de los estudiantes, mediante programas preventivos, programas de educación para la salud, métodos curativos y servicios de urgencia, así como salvaguardar la integridad física de las personas que concurren a las instalaciones de la Universidad.
+        </p>
+    </div>
+    <br>
+    <div style="display:flex; flex-direction: row; justify-items:center">
+        <div class="salud-servicio swirl-in-fwd">
+            <i class="bi bi-heart-pulse-fill"></i>
+            <h4>Atención Médica</h4>
+            <p>
+                Asistencia Médica de Emergencia 24 Horas Empresa SAS TELÉFONO DE EMERGÉNCIAS 2263-2001
+            </p>
+        </div>
+        <div class="salud-servicio swirl-in-fwd">
+            <i class="bi bi-bag-plus-fill"></i>
+            <h4>Seguro de Accidentes Personales</h4>
+            <a href="imagenes/Trifolio-UJCV-Accidentes-Personales.pdf" target="_blank" class="btn btn-primary">
+                Descargar trifolio PDF
+            </a>
+        </div>
+        <div class="salud-servicio swirl-in-fwd">
+            <i class="bi bi-bandaid"></i>
+            <h4>Enfermería</h4>
+            <p>
+                Botiquín de Medicamentos básicos, primeros auxilios y camilla de espera (Dirección de Desarrollo y Bienestar Estudiantil 3er. Piso, Edificio Académico)
+            </p>
+        </div>
+    </div>
+    
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Hasly Jasmine Meza Martinez
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

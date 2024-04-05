@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+<div id="container" class="contenido_seccion">
+    <div class="arquitectura-hero">
+        <div class="carrera-hero-text"><u>Arquitectura</u></div>
+    </div>
+    <div class="perfil-carrera">        
+        <div class="perfil-contenedor-horizontal">
+            <div class="perfil-contenedor-vertical" style="width:49%">
+                <h2>Perfil de la carrera</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>Los futuros Egresados de la Arquitectura con la capacidad creativa, imaginativa, innovadora y de liderazgo en el proceso de diseño de la arquitectura y urbanísimo.</p>
+                    <ul>
+                    <li>Los Gerentes capaces de concebir y visualizar proyectos específicos en el ámbito de la arquitectura y urbanismo. Los Gerentes capaces de responder con el diseño a las condiciones bioclimáticas, paisajísticas y topográficas de cada región.</li>
+                    <li>Los Gerentes capaces de detectar condiciones físicas, ambientales y culturales del lugar de emplazamiento de proyectos.</li>
+                    <li>Los Gerentes capaces de definir el sistema estructural - constructivo y de instalaciones que demanda un proyecto arquitectónico.</li>
+                    <li>Los Consultores capaces de supervisar la ejecución de la construcción según su diseño y especificaciones técnicas.</li>
+                    <li>Los Consultores capaces de argumentar y fundamentar técnicamente propuestas arquitectónicas y urbanas.</li>
+                    <li>Los arquitectos con amplios conocimientos de la realidad ambiental capaces de transformar el espacio, los centros habitacionales, los centros poblados, las ciudades y todos los espacios habitables en áreas adecuadas para la vida
+                        humana, en armonía y respeto con el medioambiente.</li>                    
+                    </ul>
+                    <p>Empresarios de la arquitectura con conciencia sobre el compromiso con la sociedad, conociendo, adoptando y procurando los principios de justicia social.
+                        Profesionales conscientes del sentido de la democracia, la paz, los derechos humanos, la educación, la cultura y el desarrollo social y económico de la Nación, con actitud crítica y de liderazgo y capaces de conducirse con responsabilidad, honestidad e integridad.</p>
+                </div>
+                <br/>
+                <h2>Objetivos</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>Producir diseñadores/constructores competentes, creativos, con mente crítica y observadores de la ética profesional; y producir arquitectos para el mundo que sean intelectualmente maduros, ecológicamente sensibles y socialmente responsables.</p>
+                </div>
+            </div>            
+            <div class="perfil-contenedor-vertical" style="width:49%; margin-left:2%;">                
+                <a href="imagenes/lic_arquitectura.pdf" target="_blank">
+                    <img src="imagenes/lic_arquitectura.png" style="width:100%; border: 2px solid white;" alt="">
+                </a>
+            </div>
+        </div>        
+    </div>        
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Hasly Jasmine Meza Martinez
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

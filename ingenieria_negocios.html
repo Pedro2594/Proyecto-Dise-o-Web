@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+<div id="container" class="contenido_seccion">
+    <div class="ingenieria-negocios-hero">
+        <div class="carrera-hero-text"><u>Ingenier&iacute;a de Negocios y Tecnolog&iacute;as de la Informaci&oacute;n</u></div>
+    </div>
+    <div class="perfil-carrera">        
+        <div class="perfil-contenedor-horizontal">
+            <div class="perfil-contenedor-vertical" style="width:49%">
+                <h2>Perfil de la carrera</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>Modelar estructuras y procesos de negocios, que le permitan diseñar soluciones integrales que brinden información confiable, completa y oportuna a los tomadores de decisiones. Identificar oportunidades de mejora de procesos e innovación para generar valor en las organizaciones, utilizando tecnologías de información. Definir e implementación de un Plan Administrativo de Cambio. Evaluar la viabilidad técnica, operativa, económica y organizacional de los proyectos. Diseñar y coordinar proyectos de mejora de los servicios de la empresa. Diseñar, desarrollar y poner en ejecución soluciones de sistemas de informaci&oacute;n</p>
+                </div>
+                <br/>
+                <h2>Objetivos</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>Formar profesionales en el área de Negocios y Tecnologías de Información, con sólidos conocimientos técnicos y humanísticos que satisfagan las demandas actuales del pais, con compromiso ético, social, ambiental, para proponer dirigir y ejecutar procesos de negocios mediante el uso de tecnologías de la información, en empresas públicas y privadas cumpliendo con las tecnologías de la información en empresas públicas y privadas cumpliendo con las demandas de la sociedad moderna.</p>
+                </div>
+            </div>            
+            <div class="perfil-contenedor-vertical" style="width:49%; margin-left:2%;">                
+                <a href="imagenes/ing_negocios.pdf" target="_blank">
+                    <img src="imagenes/ing_negocios.png" style="width:100%; border: 2px solid white;" alt="">
+                </a>
+            </div>
+        </div>        
+    </div>        
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Pedro Antonio Ponce Reyes
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

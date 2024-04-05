@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+<div id="container" class="contenido_seccion">
+    <div class="ingenieria-construccion-hero">
+        <div class="carrera-hero-text"><u>Ingeniería de la Construcción</u></div>
+    </div>
+    <div class="perfil-carrera">        
+        <div class="perfil-contenedor-horizontal">
+            <div class="perfil-contenedor-vertical" style="width:49%">
+                <h2>Perfil de la carrera</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>El profesional egresado está formado para liderar, desarrollar y supervisar proyectos de infraestructura vial y edificaciones de cualquier tipo.</p>
+                    <p>El profesional egresado de la UJCV se desempeñará como proyectista de diseño, desarrollo y supervición de obras de infraestructura vial y edificaciones de cualquier envergadura y será capaz de interactuar mediante sus propuestas y acciones con diversos contextos culturales, ambientales y tecnológicos.</p>
+                    <p>El egresado orientará su práctica profesional hacia una faceta especializada para brindar al país las soluciones integrales acordes con los avances tecnológicos y las características socio-culturales y ambientales en el marco de la ingeniería civil en particular y de la construcción en general.</p>
+                </div>
+                <br/>
+                <h2>Objetivos</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>Formar profesionales altamente calificados para el diseño, ejecución, supervisión, reparación y mantenimiento de proyectos de infraestructura viales, edificios y viviendas, empleando conceptos de diseño y construcción de acuerdo a diferentes contextos culturales, ambientales y tecnológicos.</p>
+                </div>
+            </div>            
+            <div class="perfil-contenedor-vertical" style="width:49%; margin-left:2%;">                
+                <a href="imagenes/ing_construccion.pdf" target="_blank">
+                    <img src="imagenes/ing_construccion.png" style="width:100%; border: 2px solid white;" alt="">
+                </a>
+            </div>
+        </div>        
+    </div>        
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Pedro Antonio Ponce Reyes
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

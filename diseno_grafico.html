@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+<div id="container" class="contenido_seccion">
+    <div class="diseno-grafico-hero">
+        <div class="carrera-hero-text"><u>Licenciatura en Dise&ntilde;o Gr&aacute;fico y Comunicaci&oacute;n Corporativa</u></div>
+    </div>
+    <div class="perfil-carrera">        
+        <div class="perfil-contenedor-horizontal">
+            <div class="perfil-contenedor-vertical" style="width:49%">
+                <h2>Perfil de la carrera</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>El aspirante a ser Diseñador Gráfico y Comunicador Corporativo deberá poseer las siguientes características:</p>
+                    <ol>
+                        <li>Apreciación estética, imaginación y originalidad, que permitan el desarrollo de proyectos novedosos, creativos y de valor plástico.</li>
+                        <li>Agudeza visual, agilidad manual y precisión para el manejo de equipo y herramientas, para la aplicación de procesos técnicos y artísticos.</li>
+                        <li>Habilidad para diseñar y dibujar.</li>
+                        <li>Habilidad para conceptualizar y desarrollar proyectos a partir de la recopilación, la interpretación y el análisis de la información.</li>
+                        <li>Facilidad de palabra y sentido crítico que permitan tomar, analizar, explicar y justificar decisiones de toda índole.</li>
+                        <li>Interés en los valores sociales y culturales.</li>
+                        <li>Interés en el lenguaje visual y gráfico.</li>
+                        <li>Capacidad para analizar los procesos económicos, políticos y sociales e interesado en la solución de problemas.</li>
+                        <li>Habilidades para la comunicación en forma oral y escrita.</li>
+                        <li>Capacidad para trabajar en equipo.</li>
+                        <li>Conciencia social.</li>
+                    </ol>
+                </div>
+                <br/>
+                <h2>Objetivos</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>Formar profesionales del Diseño Gráfico y la Comunicación Corporativa, que sean capaces de detectar las oportunidades y necesidades del contexto social en el campo de la comunicación visual y dar soluciones creativas y efectivas; con capacidades de gestión empresarial y de innovación, así como en el uso apropiado de los medios tecnológicos para producir mensajes visuales eficaces, y transmitirlos a través de la industria editorial, televisión, agencias de publicidad o de arte fotográfico, la pintura, la decoración urbana y hasta la industria textil, entre otros.</p>
+                </div>
+            </div>            
+            <div class="perfil-contenedor-vertical" style="width:49%; margin-left:2%;">                
+                <a href="imagenes/lic_diseno_grafico.pdf" target="_blank">
+                    <img src="imagenes/lic_diseno_grafico.png" style="width:100%; border: 2px solid white;" alt="">
+                </a>
+            </div>
+        </div>        
+    </div>        
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Pedro Antonio Ponce Reyes
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

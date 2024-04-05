@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <h1>Tutorial para realizar Pagos Online</h1>
+    <iframe width="964" 
+    height="542" 
+    src="https://www.youtube.com/embed/fC7NQR_SefY" 
+    title="TUTORIAL PAGOS EN LÍNEA UJCV" frameborder="1" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+    <br/>
+    <h2>¿Necesitas soporte para realizar tus pagos u otras gestiones?</h2>
+    <a href="cau.html" target="if_contenido" class="btn btn-primary" >Contacta a tu asesor(a) del CAU</a>
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Hasly Jasmine Meza Martinez
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

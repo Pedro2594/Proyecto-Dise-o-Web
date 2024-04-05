@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+<div id="container" class="contenido_seccion">
+    <div class="administracion-hero">
+        <div class="carrera-hero-text"><u>Licenciatura en Administraci&oacute;n de Empresas</u></div>
+    </div>
+    <div class="perfil-carrera">        
+        <div class="perfil-contenedor-horizontal">
+            <div class="perfil-contenedor-vertical" style="width:49%">
+                <h2>Perfil de la carrera</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>El Plan de Estudios de la carrera de Administración de Empresas, se ha diseñado con el objetivo de proveer y desarrollar un conjunto de conocimientos teórico prácticos, habilidades y destrezas necesarias para su desempeño profesional y las actitudes y valores que debe profesar para poder atender con eficiencia las necesidades del mercado laboral y las propias expectativas de los egresados.</p>
+                </div>
+                <br/>
+                <h2>Objetivos</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>Formar profesionales de excelencia, líderes emprendedores con sólidos valores morales y éticos, preparados en el campo científico, tecnológico y administrativo con estándares internacionales para emprender y dirigir empresas que contribuyan al desarrollo del país.</p>
+                </div>
+            </div>            
+            <div class="perfil-contenedor-vertical" style="width:49%; margin-left:2%;">                
+                <a href="imagenes/lic_administracion.pdf" target="_blank">
+                    <img src="imagenes/lic_administracion.png" style="width:100%; border: 2px solid white;" alt="">
+                </a>
+            </div>
+        </div>        
+    </div>        
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Pedro Antonio Ponce Reyes
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

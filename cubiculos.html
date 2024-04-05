@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <br>
+    <div style="display: flex; flex-direction:row">
+        <img src="imagenes/sidebar1.jpg" alt="" style="height: 700px;">
+        <img src="imagenes/salas_estudio_individuales.jpg" alt="" style="width: 700px; height:700px">        
+        <img src="imagenes/sidebar2.jpg" alt="" style="height: 700px;">
+    </div>
+    
+    <div class="contenedor-texto" style="width: 700px;">
+        <p>
+            La <strong>UJCV</strong> pone a disposición de sus estudiantes la
+            sala de estudios individuales. La cual esta equipada con múltiples
+            cubículos donde un estudiante puede sentarse a estudiar de forma
+            comoda en su portatil o con un libro de la biblioteca.
+        </p>        
+    </div>
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Christian Javier Alvarez Moreno
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

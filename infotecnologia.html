@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+<div id="container" class="contenido_seccion">
+    <div class="info-tec-hero">
+        <div class="carrera-hero-text"><u>Ingenier&iacute;a en Infotecnolog&iacute;a</u></div>
+    </div>
+    <div class="perfil-carrera">        
+        <div class="perfil-contenedor-horizontal">
+            <div class="perfil-contenedor-vertical" style="width:49%">
+                <h2>Perfil de la carrera</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>El Ingeniero en Infotecnología de la UJCV será un profesional con sólida formación en tecnologías de la información y comunicación, sistemas digitales y electrónica, ingeniería de software; seguridad de la información; programación de dispositivos móviles y videojuegos; auditoría de sistemas de información; y ecología de la información, planeación estratégica, gestión de la innovación, gerencia de proyectos, gerencia de la Infotecnología, emprendimiento y desarrollo empresarial.</p>
+                    <p>Los Ingenieros en Infotecnología de la UJCV serán los futuros Empresarios de la Infotecnología; los nuevos Gerentes de Infotecnología; Gerentes del Conocimiento; Gerentes de Proyectos Tecnológicos; Consultores en Redes y Comunicaciones, Seguridad de la Información y Auditores de Sistemas; Gerentes de Bases de Datos; Desarrolladores de Aplicaciones Web, Dispositivos Móviles y Videojuegos; Diseñadores de Arquitecturas de Información y Comunicación; y, los futuros Docentes universitarios en el área de la Infotecnología.</p>            
+                </div>
+                <br/>
+                <h2>Objetivos</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>Formar profesionales de clase mundial con los conocimientos teórico-prácticos tanto en tecnologías de la información y comunicación como en ecología de la información, creatividad y gerencia, utilizando estrategias, métodos, técnicas, herramientas y estándares internacionales que permitan optimizar y lograr soluciones y proyectos exitosos en el marco de su competencia.</p>
+        
+                    <p>Formar profesionales creativos, emprendedores, éticos, con alta conciencia social que generen oportunidades de mejora, aumente la productividad y competitividad de las organizaciones o empresas en que se desenvuelvan.</p>
+        
+                    <p>Proveer a los futuros profesionales las habilidades y competencias para desarrollar tendencias ágiles de gestión de información para la toma de decisiones y de análisis de negocios</p>
+                </div>
+            </div>            
+            <div class="perfil-contenedor-vertical" style="width:49%; margin-left:2%;">                
+                <a href="imagenes/IngInfotecnologia.pdf" target="_blank">
+                    <img src="imagenes/plan_infotecnologia.png" style="width:100%; border: 2px solid white;" alt="">
+                </a>
+            </div>
+        </div>        
+    </div>        
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Hasly Jasmine Meza Martinez
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

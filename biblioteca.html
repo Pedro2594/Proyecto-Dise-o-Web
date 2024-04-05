@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <br>
+    <div style="display: flex; flex-direction:row">
+        <img src="imagenes/sidebar1.jpg" alt="" style="height: 508px;">
+        <img src="imagenes/biblioteca.jpg" alt="" style="width:900px; height:508px;">
+        <img src="imagenes/sidebar2.jpg" alt="" style="height: 508px;">
+    </div>
+    
+    <br>
+    <div class="contenedor-texto" style="width: 900px;">
+        <p>
+            Los pasos para retirar un libro de la biblioteca son los siguientes:            
+        </p>
+        <ol style="text-align: left;">
+            <li>Consultarle a la bibliotecaria si tiene el libro</li>
+            <li>Si lo tiene se firma un cuaderno quedando registrado quien lo saco y cuando lo regresará.
+                Si se regresa posterior a la fecha acordadá sera receptor de una sanción la cual puede llegar
+                a ser monetaria.
+            </li>
+            <li>Regresar el libro en la fecha acordadá realizando una inspección del mismo validando
+                que se regresa en las mismas condiciones que se retiro.
+            </li>
+            <li>Se registra en el libro de entradas y salidas que su libro fue devuelto y cualquier observación</li>
+        </ol>
+    </div>
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Pedro Antonio Ponce Reyes
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

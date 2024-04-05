@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+<div id="container" class="contenido_seccion">
+    <div class="ingenieria-civil-hero">
+        <div class="carrera-hero-text"><u>Ingeniería Civil</u></div>
+    </div>
+    <div class="perfil-carrera">        
+        <div class="perfil-contenedor-horizontal">
+            <div class="perfil-contenedor-vertical" style="width:49%">
+                <h2>Perfil de la carrera</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>Los egresados de la carrera de Ingeniería Civil se podrán desempeñar como ingenieros en: Estructuras resistentes, obras civiles de todo tipo. Construcción de obras civiles, ya sea como proyectista o como ejecutor de las obras. Topografía, cartografía, geodesia y catastro. Obras de regulación, captación, abastecimiento y tratamiento de aguas. Obras de riego y sus correspondientes obras de desagüe y drenaje. Obras destinadas al aprovechamiento de la energía hidráulica y otras fuentes alternativas. Obras de saneamiento urbano, rural y regional, Obras de control de erosión. Obras de urbanismo en lo referente al trazado urbano, y organización de los servicios públicos vinculados con higiene, transporte, comunicaciones y energía. Estudios, tareas y asesoramientos relacionados con: Mecánica de suelos. Trabajos topográficos y geodésicos.</p>
+                </div>
+                <br/>
+                <h2>Objetivos</h2>
+                <div class="perfil-carrera-contenedor-texto">
+                    <p>El profesional egresado de la carrera de Ingeniería civil en el grado de licenciatura podrá desempeñarse en diseño estructural, hidráulica, transporte, supervisión de obras, consultorías, investigación de materiales, dirigir y ejecutar proyectos de construcción, administración de proyectos, en todas estas áreas podrá desempeñarse debido a sus conocimientos, habilidades y destrezas, actitudes y valores que adquirirán paulatinamente en las aulas de la Universidad José Cecilio del Valle (UJCV).</p>
+                    <p>De tal manera, que la Ingeniería Civil responderá a las necesidades de: viviendas, edificaciones, acueductos y redes de distribución de aguas y alcantarillado, represas, canales, puentes, terminales terrestres, puertos y aeropuertos."</p>
+                </div>
+            </div>            
+            <div class="perfil-contenedor-vertical" style="width:49%; margin-left:2%;">                
+                <a href="imagenes/ing_civil.pdf" target="_blank">
+                    <img src="imagenes/ing_civil.png" style="width:100%; border: 2px solid white;" alt="">
+                </a>
+            </div>
+        </div>        
+    </div>        
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Pedro Antonio Ponce Reyes
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

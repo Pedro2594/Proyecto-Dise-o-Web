@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <br>
+    <div style="display: flex; flex-direction:row">
+        <img src="imagenes/sidebar1.jpg" alt="" style="height: 700px;" class="slide-in-elliptic-top-fwd">
+        <img src="imagenes/laboratorio_quimica.jpg" alt="" style="width: 700px; height:700px" class="slide-in-elliptic-top-fwd">
+        <img src="imagenes/sidebar2.jpg" alt="" style="height: 700px;" class="slide-in-elliptic-top-fwd">
+    </div>
+    
+    <div class="contenedor-texto" style="width: 700px;">
+        <p>
+            Un laboratorio es un espacio equipado con los medios necesarios para llevar a cabo experimentos, investigaciones, estudios y prácticas de carácter científico, técnico o tecnológico. Lo más importante de todo es que tiene que ser siempre seguro.
+        </p>        
+    </div>
+    
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Christian Javier Alvarez Moreno
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

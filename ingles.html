@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <br>
+    <img src="imagenes/ingles.png" alt="" class="bounce-in-top">
+    <br>
+    <div class="idioma-texto">
+        <p>
+            Aprender inglés se ha convertido en una necesidad imperante en todos los ámbitos de nuestra vida desde que eres estudiante, profesional y hasta empresario. Éste idioma es considerado la lengua global. Te permite interactuar con el mundo y sus múltiples culturas. ¿Qué esperas? Anímate a ser un profesional de éxito aprendiendo inglés.
+        </p>
+    </div>
+    
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Christian Javier Alvarez Moreno
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

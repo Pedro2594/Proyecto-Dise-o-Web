@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <h1>Contactos</h1>
+    <div class="contenedor-contactos slide-in-elliptic-top-fwd">
+        <h1 style="color:#6b43fd">Contacto <span class="text-pop-up-top" style="color:#4375fd">oficial</span> UJCV</h1>
+        <p>
+            <strong style="font-size: xx-large;">+504 2275-8510</strong>            
+        </p>
+        <p>
+            Contacta directamente a través de nuestra planta telefónica PBX, Sede principal Universidad José Cecilio del Valle            
+        </p>
+        <a href="tel:+50422758510" class="btn btn-primary" role="button">
+            <i class="bi bi-telephone-fill"></i>
+            Llamar
+        </a>
+    </div>
+    <br/>
+    <div class="contenedor-contactos slide-in-elliptic-top-fwd">
+        <h1 style="color:#6b43fd">Escibe a nuesta cuenta <span class="text-pop-up-top" style="color:#31ca0b">oficial</span> de <span class="text-pop-up-top" style="color:#31ca0b">WhatsApp</span></h1>
+        <p>
+            <strong style="font-size: xx-large;">+504 2275-8528</strong>            
+        </p>
+        <p>
+            Contacta directamente a través de nuestra planta telefónica PBX, Sede principal Universidad José Cecilio del Valle            
+        </p>
+        <a href="https://api.whatsapp.com/send?phone=50422758528" target="_blank" class="btn btn-primary" role="button" style="background-color:#31ca0b">
+            <i class="bi bi-whatsapp"></i>
+            Enviar WhatsApp
+        </a>
+    </div>
+</div>
+<nav class="navbar fixed-bottom footer-autores-gris">
+    Clase: Diseño Web | Autor: Hasly Jasmine Meza Martinez
+</nav>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>

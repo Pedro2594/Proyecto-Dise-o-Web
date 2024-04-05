@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./css/estilo.css">
+<script src="./js/bootstrap.bundle.js"></script>
+
+<div id="container" class="contenido_seccion">
+    <div id="carousel_inicio" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel_inicio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Imagen 1"></button>
+            <button type="button" data-bs-target="#carousel_inicio" data-bs-slide-to="1" aria-label="Imagen 2"></button>
+            <button type="button" data-bs-target="#carousel_inicio" data-bs-slide-to="2" aria-label="Imagen 3"></button>
+            <button type="button" data-bs-target="#carousel_inicio" data-bs-slide-to="3" aria-label="Imagen 4"></button>
+        </div>
+        <div class="carousel-inner ">            
+            <div class="carousel-item active">
+                <img class="imagen-carrusel" src="imagenes/carousel_1.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="imagen-carrusel" src="imagenes/carousel_2.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="imagen-carrusel" src="imagenes/carousel_3.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="imagen-carrusel" src="imagenes/carousel_4.jpg" alt="">
+            </div>
+        </div>        
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel_inicio" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previo</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel_inicio" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+    <div class="inicio-hero-2">
+        &nbsp;
+        <div class="inicio-hero-2-text slit-in-vertical"><i class="bi bi-kanban"></i> Proyectos de innovaci&oacute;n</div>
+        <div class="inicio-hero-2-text slit-in-vertical"><i class="bi bi-building-fill"></i> Dos modernos campus</div>
+        <div class="inicio-hero-2-text slit-in-vertical"><i class="bi bi-calendar3"></i> M&aacute;s de 40 a&ntilde;os de experiencia educativa</div>
+    </div>
+    <nav class="navbar fixed-bottom footer-autores">
+        Clase: Diseño Web | Autor: Hasly Jasmine Meza Martinez
+    </nav>
+</div>
+<script>
+    let height;
+    const sendPostMessage = () => {
+        if (height !== document.getElementById('container').offsetHeight) {
+            height = document.getElementById('container').offsetHeight;
+            window.parent.postMessage({
+            frameHeight: height
+            }, '*');
+            console.log(height) // check the message is being sent correctly
+        }
+    }
+    window.onload = () => sendPostMessage();    
+</script>
